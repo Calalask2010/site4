@@ -26,6 +26,11 @@ body {
     background: #000;
     overflow-x: hidden;
     animation: fadeIn 1s ease-in-out;
+    cursor: url('https://r2.guns.lol/ea675c46-11ff-4004-a885-af997b8fcdd0.png'), auto;
+}
+
+* {
+    cursor: url('https://r2.guns.lol/ea675c46-11ff-4004-a885-af997b8fcdd0.png'), auto;
 }
 
 @keyframes fadeIn {
@@ -202,100 +207,7 @@ body {
     color: var(--neon-color);
 }
 
-/* Аудиоплеер */
-.audio-player {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 15px 20px;
-    border-radius: 25px;
-    box-shadow: 0 0 20px var(--neon-color);
-    animation: pulse 2s infinite;
-    margin-bottom: 20px;
-}
-
-.audio-player.compact {
-    gap: 10px;
-    padding: 10px 15px;
-    border-radius: 20px;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 20px var(--neon-color); }
-    50% { box-shadow: 0 0 30px var(--neon-color); }
-    100% { box-shadow: 0 0 20px var(--neon-color); }
-}
-
-.audio-player button {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.audio-player button:hover {
-    color: var(--neon-color);
-    transform: scale(1.2);
-}
-
-.audio-player input[type="range"] {
-    width: 200px;
-    accent-color: var(--neon-color);
-    transition: width 0.3s ease;
-}
-
-.audio-player span {
-    font-size: 1rem;
-    color: var(--text-muted);
-}
-
-.track-info {
-    display: flex;
-    flex-direction: column;
-    min-width: 150px;
-}
-
-.track-title {
-    font-size: 0.9rem;
-    color: var(--text-color);
-    margin-bottom: 2px;
-}
-
-.track-artist {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-}
-
-.playlist {
-    background: var(--secondary-bg);
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.playlist-item {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin-bottom: 5px;
-}
-
-.playlist-item:hover {
-    background: rgba(0, 255, 204, 0.1);
-}
-
-.playlist-item.active {
-    background: rgba(0, 255, 204, 0.2);
-    border-left: 3px solid var(--neon-color);
-}
+/* Аудиоплеер удален */
 
 /* Карточки */
 .card {

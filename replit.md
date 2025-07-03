@@ -109,6 +109,7 @@ This is a personal website for a user named "modera" built with Flask. The appli
 - July 03, 2025. Initial setup with full portfolio website
 - July 03, 2025. Simplified website: removed portfolio, blog, contact sections; changed brand from "hf1sh" to "modera"; streamlined about page; added mysite folder with original design files
 - July 03, 2025. Updated content with user's edgy/informal style, added Telegram link, removed email; made audio player more compact; added PostgreSQL database with TikTok hits playlist data
+- July 03, 2025. Completely removed audio player and playlist functionality; added custom cursor from external image URL; simplified JavaScript to remove all audio-related code
 
 ## User Preferences
 

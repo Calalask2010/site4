@@ -15,40 +15,11 @@
             </a>
         </div>
         
-        <!-- Audio Player -->
-        <div class="audio-player compact">
-            <button id="playPauseBtn">
-                <i class="fas fa-play"></i>
-            </button>
-            <div class="track-info">
-                <div class="track-title">Хиты из ТикТока</div>
-            </div>
-            <input type="range" id="seekBar" value="0" min="0" max="100">
-            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
-        </div>
-        
-        <!-- Playlist -->
-        {% if tracks %}
-        <div class="playlist">
-            <h4 style="color: var(--neon-color); margin-bottom: 15px;">
-                <i class="fas fa-music"></i> Плейлист
-            </h4>
-            <div id="playlist">
-                {% for track in tracks %}
-                <div class="playlist-item" data-track-id="{{ track.id }}">
-                    <div class="track-info">
-                        <div class="track-title">{{ track.title }}</div>
-                        <div class="track-artist">{{ track.artist }}</div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-        {% endif %}
+
     </section>
     
 
 </div>
 
-<audio id="audio" preload="metadata"></audio>
+
 {% endblock %}
