@@ -94,12 +94,26 @@ function updatePlaylist() {
     tracks.forEach((track, index) => {
         const item = document.createElement('div');
         item.className = 'playlist-item';
-        item.innerHTML = `
-            <div class="track-info">
-                <div class="track-title">${track.title}</div>
-                <div class="track-artist">${track.artist}</div>
-            </div>
-        `;
+        
+        // Create track info container
+        const trackInfo = document.createElement('div');
+        trackInfo.className = 'track-info';
+        
+        // Create title element with safe text content
+        const titleDiv = document.createElement('div');
+        titleDiv.className = 'track-title';
+        titleDiv.textContent = track.title;
+        
+        // Create artist element with safe text content
+        const artistDiv = document.createElement('div');
+        artistDiv.className = 'track-artist';
+        artistDiv.textContent = track.artist;
+        
+        // Append elements
+        trackInfo.appendChild(titleDiv);
+        trackInfo.appendChild(artistDiv);
+        item.appendChild(trackInfo);
+        
         item.addEventListener('click', () => {
             loadTrack(index);
             if (isPlaying) {
