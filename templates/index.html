@@ -5,7 +5,7 @@
     <!-- Profile Section -->
     <section class="profile-section">
         <img src="https://r2.guns.lol/e6754fd4-726b-4494-b122-4a1ba5df1678.webp" alt="Аватар" class="avatar">
-        <h1 class="username">hf1sh</h1>
+        <h1 class="username">modera</h1>
         <p class="status">guns.lol on top!</p>
         
         <!-- Social Icons -->
@@ -64,107 +64,7 @@
         {% endif %}
     </section>
     
-    <!-- Latest Portfolio -->
-    {% if portfolio %}
-    <section class="section">
-        <h2 class="section-title">
-            <i class="fas fa-briefcase"></i> Последние работы
-        </h2>
-        <div class="row">
-            {% for item in portfolio %}
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    {% if item.image_url %}
-                    <img src="{{ item.image_url }}" class="card-img-top" alt="{{ item.title }}">
-                    {% else %}
-                    <div class="card-img-top d-flex align-items-center justify-content-center" style="background: var(--secondary-bg);">
-                        <i class="fas fa-image fa-3x" style="color: var(--text-muted);"></i>
-                    </div>
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ item.title }}</h5>
-                        <p class="card-text">{{ item.description[:100] }}...</p>
-                        {% if item.technologies %}
-                        <div class="portfolio-tech mb-3">
-                            {% for tech in item.technologies.split(',') %}
-                            <span class="tech-tag">{{ tech.strip() }}</span>
-                            {% endfor %}
-                        </div>
-                        {% endif %}
-                        <div class="d-flex gap-2">
-                            {% if item.project_url %}
-                            <a href="{{ item.project_url }}" target="_blank" class="btn btn-primary btn-sm">
-                                <i class="fas fa-external-link-alt"></i> Открыть
-                            </a>
-                            {% endif %}
-                            <a href="{{ url_for('portfolio') }}" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-info-circle"></i> Подробнее
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <div class="text-center">
-            <a href="{{ url_for('portfolio') }}" class="btn btn-primary">
-                <i class="fas fa-arrow-right"></i> Смотреть все работы
-            </a>
-        </div>
-    </section>
-    {% endif %}
-    
-    <!-- Latest Blog Posts -->
-    {% if posts %}
-    <section class="section">
-        <h2 class="section-title">
-            <i class="fas fa-blog"></i> Последние записи
-        </h2>
-        <div class="row">
-            {% for post in posts %}
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    {% if post.image_url %}
-                    <img src="{{ post.image_url }}" class="card-img-top" alt="{{ post.title }}">
-                    {% else %}
-                    <div class="card-img-top d-flex align-items-center justify-content-center" style="background: var(--secondary-bg);">
-                        <i class="fas fa-newspaper fa-3x" style="color: var(--text-muted);"></i>
-                    </div>
-                    {% endif %}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ post.title }}</h5>
-                        <p class="card-text">{{ post.content[:100] }}...</p>
-                        <small class="text-muted">
-                            <i class="fas fa-calendar"></i> {{ post.date_posted.strftime('%d.%m.%Y') }}
-                        </small>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        <div class="text-center">
-            <a href="{{ url_for('blog') }}" class="btn btn-primary">
-                <i class="fas fa-arrow-right"></i> Читать блог
-            </a>
-        </div>
-    </section>
-    {% endif %}
-    
-    <!-- Call to Action -->
-    <section class="section text-center">
-        <h2 class="section-title">Готовы к сотрудничеству?</h2>
-        <p class="lead mb-4" style="color: var(--text-muted);">
-            Свяжитесь со мной для обсуждения вашего проекта
-        </p>
-        <div class="d-flex gap-3 justify-content-center">
-            <a href="{{ url_for('contact') }}" class="btn btn-primary">
-                <i class="fas fa-envelope"></i> Связаться
-            </a>
-            <a href="{{ url_for('about') }}" class="btn btn-outline-primary">
-                <i class="fas fa-user"></i> Узнать больше
-            </a>
-        </div>
-    </section>
+
 </div>
 
 <audio id="audio" preload="metadata"></audio>

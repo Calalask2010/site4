@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a personal portfolio website for a user named "hf1sh" built with Flask. The application serves as a modern, dark-themed personal website featuring a portfolio showcase, blog functionality, contact forms, and an integrated audio player. The site supports multiple languages (primarily Russian) and includes file upload capabilities for audio tracks.
+This is a personal website for a user named "modera" built with Flask. The application serves as a modern, dark-themed personal website featuring an integrated audio player and simplified navigation. The site has been streamlined to focus on the core profile presentation with minimal sections.
 
 ## System Architecture
 
@@ -46,11 +46,8 @@ This is a personal portfolio website for a user named "hf1sh" built with Flask. 
 - **BlogForm**: Blog post creation form
 
 ### Routes (routes.py)
-- **/** (index): Homepage with latest content and audio player
-- **/about**: About page with personal information
-- **/portfolio**: Portfolio showcase with project filtering
-- **/contact**: Contact form with email notifications
-- **/blog**: Blog listing with pagination
+- **/** (index): Homepage with audio player and profile
+- **/about**: Simplified about page with personal information only
 
 ### Static Assets
 - **CSS**: Custom styling with CSS variables for easy theming
@@ -109,7 +106,8 @@ This is a personal portfolio website for a user named "hf1sh" built with Flask. 
 - **Input Validation**: WTForms validation for all user inputs
 
 ## Changelog
-- July 03, 2025. Initial setup
+- July 03, 2025. Initial setup with full portfolio website
+- July 03, 2025. Simplified website: removed portfolio, blog, contact sections; changed brand from "hf1sh" to "modera"; streamlined about page; added mysite folder with original design files
 
 ## User Preferences
 
