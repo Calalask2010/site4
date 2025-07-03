@@ -1,4 +1,5 @@
 Flask
-Flask-SQLAlchemy
-Flask-Mail
+flask_sqlalchemy
+flask_mail
+flask-wtf
 gunicorn
